@@ -29,10 +29,10 @@ def top_stories():
         story = requests.get(url).content
         stories.append(story)
 
-    json = {
+    json_obj = {
         "stories": stories
     }
-    return json.dumps(json)
+    return json.dumps(json_obj)
 
 @app.route('/top-story')
 def top_story():
